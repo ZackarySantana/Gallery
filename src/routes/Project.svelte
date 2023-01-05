@@ -69,6 +69,8 @@
 
 	img {
 		width: 100%;
+		min-width: 100%;
+		height: 150px;
 		aspect-ratio: 16 / 9;
 	}
 
@@ -83,7 +85,7 @@
 		margin: 0;
 		margin-top: 0.5em;
 		font-size: 0.9em;
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	h3.techs-header {
