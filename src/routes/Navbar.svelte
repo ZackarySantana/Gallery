@@ -1,9 +1,9 @@
 <script>
 	let navItems = [
 		['Zackary Santana', '/'],
-		['LinkedIn', '/linkedin'],
-		['GitHub', '/github'],
-		['Resume', '/resume']
+		['LinkedIn', 'https://linkedin.com/in/zackary-santana'],
+		['GitHub', 'https://github.com/ZackarySantana/'],
+		['Resume', '/ZackarySantana_Resume.pdf']
 	];
 </script>
 
@@ -22,7 +22,11 @@
 				<div class="items">
 					{#each navItems.splice(1) as item}
 						<li>
-							<a href={item[1]}>{item[0]}</a>
+							{#if item[1].startsWith('/')}
+								<a href={item[1]}>{item[0]}</a>
+							{:else}
+								<a href={item[1]} target="_blank" rel="noreferrer">{item[0]}</a>
+							{/if}
 						</li>
 					{/each}
 				</div>
@@ -37,7 +41,6 @@
 		height: 5vh;
 		min-height: 50px;
 		padding-block: 25px;
-		margin-top: 3vh;
 		background-color: #313131;
 		box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
 	}
@@ -79,6 +82,14 @@
 	li.logo {
 		font-size: 2em;
 		margin-right: 20vw;
+	}
+
+	li {
+		transition: all 200ms;
+	}
+
+	li:not(.logo):hover {
+		font-size: 1.5em;
 	}
 
 	a {
