@@ -1,8 +1,10 @@
 <script>
 	import Project from './Project.svelte';
 	import { projects } from './projects';
+	import ProjectsLine from './ProjectsLine.svelte';
 </script>
 
+<ProjectsLine />
 <main>
 	<h1>Table of Contents</h1>
 	<ul>
