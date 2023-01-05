@@ -88,10 +88,6 @@
 		transition: all 200ms;
 	}
 
-	li:not(.logo):hover {
-		font-size: 1.5em;
-	}
-
 	a {
 		text-decoration: none;
 		color: white;
@@ -105,6 +101,12 @@
 		li.logo {
 			font-size: 1.5em;
 			margin-right: 5vw;
+		}
+	}
+
+	@media (min-width: 551px) {
+		li:not(.logo):hover {
+			font-size: 1.5em;
 		}
 	}
 
@@ -146,6 +148,7 @@
 		div.items {
 			display: none;
 			position: absolute;
+			z-index: 100;
 			top: 90%;
 			right: 0;
 
