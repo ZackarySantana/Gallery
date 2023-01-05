@@ -36,6 +36,11 @@
 		padding-block: 5vh;
 		margin: 0;
 		overflow-x: hidden;
+		font-family: 'Besley', sans-serif;
+		font-weight: 300;
+	}
+
+	:global(h1, h2, h3, .logo) {
 		font-family: 'Queensides', sans-serif;
 		font-weight: 600;
 	}
@@ -56,5 +61,10 @@
 		font-family: 'Queensides';
 		src: url('/fonts/QueensidesHeavy.ttf') format('truetype');
 		font-weight: 600;
+	}
+
+	@font-face {
+		font-family: 'Besley';
+		src: url('/fonts/Besley.ttf') format('truetype');
 	}
 </style>
