@@ -156,6 +156,7 @@
 		}
 		46% {
 			pointer-events: none;
+			transform: translate(0, 0);
 		}
 	}
 
@@ -174,6 +175,7 @@
 		}
 		21% {
 			pointer-events: none;
+			transform: translate(0, 0);
 		}
 	}
 
@@ -192,6 +194,7 @@
 		}
 		21% {
 			pointer-events: none;
+			transform: translate(0, 0);
 		}
 	}
 
