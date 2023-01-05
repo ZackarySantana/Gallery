@@ -8,14 +8,13 @@ WORKDIR /app
 FROM base as deps
 
 ADD package.json package-lock.json ./
-RUN npm install
+RUN npm install --production=false
 
 FROM deps
 ENV NODE_ENV=production
 
 ADD . .
-
-RUN npm install
 RUN npm run build
+
 
 CMD ["npm", "run", "preview", "--", "--host"]
