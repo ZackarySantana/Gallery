@@ -10,7 +10,7 @@
 			<li class="title">
 				<a href={`#${project.idElement}`}>{project.title}</a>
 				<ul>
-					<li>{project.shortDescription}</li>
+					<li class="shortDescription">{project.shortDescription}</li>
 					{#if project.github}
 						<li><a href={project.github}>GitHub</a></li>
 					{/if}
@@ -50,6 +50,14 @@
 
 	li.title {
 		margin-top: 10px;
+	}
+
+	li.title ul a {
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	li.shortDescription {
+		color: rgba(255, 255, 255, 0.8);
 	}
 
 	a {
