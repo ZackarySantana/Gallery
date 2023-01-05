@@ -1,0 +1,8 @@
+node_modules
+.prettierignore
+.prettierrc
+README.md
+.npmrc
+.gitignore
+.eslintrc.cjs
+.eslintignore
