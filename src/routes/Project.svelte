@@ -70,7 +70,6 @@
 	img {
 		width: 100%;
 		min-width: 100%;
-		height: 150px;
 		aspect-ratio: 16 / 9;
 	}
 
@@ -110,5 +109,21 @@
 
 	li {
 		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 650px) {
+		section {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: 'left' 'right';
+		}
+
+		div.right {
+			margin-top: 2vh;
+		}
+
+		div.left {
+			width: 100%;
+		}
 	}
 </style>

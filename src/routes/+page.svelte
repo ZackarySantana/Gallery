@@ -64,4 +64,11 @@
 			margin-inline: 5vw;
 		}
 	}
+
+	@media (max-width: 650px) {
+		main,
+		section {
+			margin-inline: 3vw;
+		}
+	}
 </style>

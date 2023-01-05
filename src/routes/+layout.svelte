@@ -32,10 +32,10 @@
 	:global(body) {
 		background-color: #1e1e1e;
 		width: 100vw;
-		max-width: 100vw;
+		max-width: 100%;
 		padding-block: 5vh;
-		overflow-x: hidden;
 		margin: 0;
+		overflow-x: hidden;
 		font-family: 'Queensides', sans-serif;
 		font-weight: 600;
 	}
