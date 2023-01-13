@@ -84,7 +84,7 @@ const projects: Project[] = [
         solution: "I used SvelteKit because I have used Svelte before, but wanted more practice with it.",
         images: [{ src: "/images/portfolio.png", alt: "Attach home screen" }],
         features: ["Mobile-first", "Customizable", "Fast", "Static site"],
-        techs: ["SvelteKit", "Svelte"],
+        techs: ["SvelteKit", "Svelte", "Vite"],
         github: "https://github.com/ZackarySantana/Gallery",
     }
 ];
