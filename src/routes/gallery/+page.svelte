@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Image from './Image.svelte';
+	import { projects } from '../projects';
 
 	let mouseDown = 0;
 	let lastPercentage = 0;
@@ -28,7 +29,6 @@
 			if (!(image instanceof HTMLElement)) {
 				continue;
 			}
-			image.style.objectPosition = `${percentage + 100}% -50%`;
 
 			image.animate(
 				{ objectPosition: `${percentage + 100}% -50%` },
@@ -60,56 +60,9 @@
 	on:touchmove={(e) => move(e.touches[0].clientX)}
 >
 	<div class="track" bind:this={trackElement}>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
-		<Image
-			title="Portfolio"
-			href="https://zackaryjamessantana.com"
-			src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8="
-		/>
+		{#each projects as project}
+			<Image title={project.title} href={project.demo ?? ''} src={project.images[0].src} />
+		{/each}
 	</div>
 </main>
 

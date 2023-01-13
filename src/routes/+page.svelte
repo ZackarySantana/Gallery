@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Project from './Project.svelte';
 	import { projects } from './projects';
 	import ProjectsLine from './ProjectsLine.svelte';
