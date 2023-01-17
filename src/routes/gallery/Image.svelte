@@ -9,11 +9,12 @@
 
 <div
 	on:mousedown={() => (time = Date.now())}
-	on:mouseup={() => {
-		if (Date.now() - time < 200) {
+	on:mouseup={(e) => {
+		if (Date.now() - time < 150 && href != '' && e.button == 0) {
 			window.open(href, '_blank');
 		}
 	}}
+	class={(href != '' ? 'pointer' : '') + ' container'}
 >
 	<div class="title">
 		<p>{title}</p>
@@ -24,6 +25,13 @@
 <style>
 	div {
 		position: relative;
+	}
+
+	div.container {
+		overflow: hidden;
+	}
+
+	div.pointer {
 		cursor: pointer;
 	}
 
@@ -36,8 +44,8 @@
 		color: white;
 		background-color: rgba(0, 0, 0, 0.8);
 		font-size: 2rem;
-		padding-block: 0.5rem;
-		width: 100%;
+		padding-block: 2rem;
+		width: 110%;
 		text-align: center;
 	}
 

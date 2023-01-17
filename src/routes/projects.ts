@@ -85,6 +85,7 @@ const projects: Project[] = [
         images: [{ src: "/images/portfolio.png", alt: "Attach home screen" }],
         features: ["Mobile-first", "Customizable", "Fast", "Static site"],
         techs: ["SvelteKit", "Svelte", "Vite"],
+        demo: "https://ZackaryJamesSantana.com",
         github: "https://github.com/ZackarySantana/Gallery",
     }
 ];

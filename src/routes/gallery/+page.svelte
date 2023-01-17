@@ -18,7 +18,7 @@
 				Number(getComputedStyle(mainElement).getPropertyValue('--delta_change'));
 		percentage = (mouseDelta / maxDelta) * -100 + lastPercentage;
 		percentage = Math.min(0, percentage);
-		percentage = Math.max(-90, percentage);
+		percentage = Math.max(-85, percentage);
 
 		trackElement.animate(
 			{ transform: `translate(${percentage}%, -50%)` },
@@ -44,7 +44,6 @@
 </svelte:head>
 
 <main
-	data-mouse-down-at={mouseDown}
 	bind:this={mainElement}
 	on:mousedown={(e) => (mouseDown = e.clientX)}
 	on:touchstart={(e) => (mouseDown = e.touches[0].clientX)}
@@ -63,6 +62,7 @@
 		{#each projects as project}
 			<Image title={project.title} href={project.demo ?? ''} src={project.images[0].src} />
 		{/each}
+		<div class="empty" />
 	</div>
 </main>
 
@@ -70,7 +70,7 @@
 	main {
 		position: absolute;
 		inset: 0;
-		background-color: black;
+		background-color: #1e1e1e;
 		overflow: hidden;
 
 		--width: 40vmin;
