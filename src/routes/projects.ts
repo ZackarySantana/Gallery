@@ -26,6 +26,18 @@ const projects: Project[] = [
         demo: "https://codeconstants.com",
     },
     {
+        title: "Weekdays",
+        idElement: "weekdays",
+        description: "A weekly-based kanban board to plan tasks by the day. It keeps track of the next 50 days and the past 50 days to allow you to plan your life months in advance and to move old tasks to the future.",
+        shortDescription: "A weekly-based kanban board to plan tasks by the day. Scheduling your work, homework, and other tasks has never been easier!",
+        projectDifficulties: "The app-like feel of using a kanban board was a must while developing and designing this site. Being able to drag tasks, modify them, separate them by categories, etc was extremely important as well.",
+        solution: "Solid-start is used to handle the frontend and backend. Solid-start is a unique framework that uses Solid.js and specific server actions to run code on the server. A lot of the different sub-pages of the site are tied not to state managed by the application but the url, allowing a more native browser experience.",
+        images: [{ src: "/images/weekdays.png", alt: "Example of weekdays" }],
+        features: ["Mobile-first", "Drag and drop", "Customizable", "Dark mode", "Automatic image resizing", "Account persistence with cookies"],
+        techs: ["Solid-start", "Solid.js", "Vite", "TypeScript", "SQLite", "Docker", "Fly.io", "Tailwind"],
+        demo: "https://weekdays.fly.dev",
+    },
+    {
         title: "UPE @ FIU",
         idElement: "upefiu",
         description: "This project includes: A monolithic server that handles the frontend --> backend --> database. A self-hosted CMS that holds the information for executive board and FAQ page. A Prometheus metrics server that the backend reports to. And a Grafana server that visualizes from the Prometheus metrics server.",
@@ -35,7 +47,7 @@ const projects: Project[] = [
         images: [{ src: "/images/upefiu.png", alt: "UPE Eboard of 2022" }],
         features: ["10+ pages", "Custom CMS", "Prometheus data server", "Grafana dashboard", "Authentication (different levels of users)", "Email verification", "Minification of CSS on build/dev", "Automatic image resizing", "Mobile-first"],
         techs: ["React.js", "Prometheus", "Grafana", "Express", "Node.js", "Strapi", "Prisma", "Docker", "TypeScript", "Cloundinary", "SQLite"],
-        demo: "https://upefiu.io",
+        demo: "https://flow-test.fly.dev",
     },
     {
         title: "| attach |",
